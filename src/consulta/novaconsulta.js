@@ -54,24 +54,6 @@ consultroute.post("/new/tipoconsultas", (req, res) => {
 })
 
 
-
-consultroute.post("/new/horario", (req, res) => {
-    const { dia_da_semana , horario_inicio , horario_fim } = req.body;
-
-    conn.query(`insert into horarios ( dia_da_semana , horario_inicio , horario_fim ) values 
-        ('${dia_da_semana}', '${horario_inicio}' , '${horario_fim}' )`, (err, result) => {
-
-        if (err) {
-            return res.json(err.message)
-        }
-
-        res.json({
-            "mensagem":"cadastrado com sucesso"
-        })
-    })
-})
-
-
 consultroute.post("/new/medico", (req, res) => {
     const { nome , crm , telefone , email , especialidade  } = req.body;
 
