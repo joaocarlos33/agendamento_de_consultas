@@ -28,10 +28,10 @@ consultRouteUpdate.put("/edit/medico", (req, res) => {
         `UPDATE medicos SET nome = '${nome}', crm = '${crm}', telefone = '${telefone}', email = '${email}', especialidade = '${especialidade}' WHERE id = ${id}`,
         (err, result) => {
             if (err) {
-                res.status(500).json({ erro: "Erro ao atualizar o agendamento." });
+                res.status(500).json({ erro: "Erro ao atualizar." });
             } else {
                 res.json({
-                    mensagem: "Agendamento atualizado com sucesso!",
+                    mensagem: "Atualizado com sucesso!",
                 });
             }
         }
@@ -46,10 +46,10 @@ consultRouteUpdate.put("/edit/paciente", (req, res) => {
         `UPDATE pacientes SET nome = '${nome}', data_nascimento = '${data_nascimento}', telefone = '${telefone}', email = '${email}', endereco = '${endereco}' WHERE cpf = ${cpf} `,
         (err, result) => {
             if (err) {
-                res.status(500).json({ erro: "Erro ao atualizar o agendamento." });
+                res.status(500).json({ erro: "Erro ao atualizar." });
             } else {
                 res.json({
-                    mensagem: "Agendamento atualizado com sucesso!",
+                    mensagem: "Atualizado com sucesso!",
                 });
             }
         }
@@ -64,10 +64,10 @@ consultRouteUpdate.put("/edit/pagamento", (req, res) => {
         `UPDATE pagamentos SET data_pagamento = '${data_pagamento}', valor = '${valor}' WHERE id = ${id} `,
         (err, result) => {
             if (err) {
-                res.status(500).json({ erro: "Erro ao atualizar o agendamento." });
+                res.status(500).json({ erro: "Erro ao atualizar." });
             } else {
                 res.json({
-                    mensagem: "Agendamento atualizado com sucesso!",
+                    mensagem: "Atualizado com sucesso!",
                 });
             }
         }
@@ -82,10 +82,10 @@ consultRouteUpdate.put("/edit/sala", (req, res) => {
         `UPDATE salas SET numero = ${numero}, andar = ${andar} , tipo = '${tipo}' WHERE id = ${id} `,
         (err, result) => {
             if (err) {
-                res.status(500).json({ erro: "Erro ao atualizar o agendamento." });
+                res.status(500).json({ erro: "Erro ao atualizar." });
             } else {
                 res.json({
-                    mensagem: "Agendamento atualizado com sucesso!",
+                    mensagem: "Atualizado com sucesso!",
                 });
             }
         }
@@ -100,10 +100,10 @@ consultRouteUpdate.put("/edit/tipodeconsulta", (req, res) => {
         `UPDATE tipoconsulta SET descricao = '${descricao}' WHERE id = ${id} `,
         (err, result) => {
             if (err) {
-                res.status(500).json({ erro: "Erro ao atualizar o agendamento." });
+                res.status(500).json({ erro: "Erro ao atualizar." });
             } else {
                 res.json({
-                    mensagem: "Agendamento atualizado com sucesso!",
+                    mensagem: "Atualizado com sucesso!",
                 });
             }
         }
