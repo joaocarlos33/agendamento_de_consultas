@@ -57,7 +57,7 @@ consultroute.post("/new/tipoconsultas", (req, res) => {
 consultroute.post("/new/medico", (req, res) => {
     const { nome , telefone , email , especialidade  } = req.body;
 
-    conn.query(`insert into medicos ( nome , crm , telefone , email , especialidade ) values 
+    conn.query(`insert into medicos ( nome , telefone , email , especialidade ) values 
         ('${nome}' , '${telefone}' , '${email}' , '${especialidade}')`, (err, result) => {
 
         if (err) {
