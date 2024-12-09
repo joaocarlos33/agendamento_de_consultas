@@ -93,4 +93,22 @@ consultRouteDelete.delete("/del/tpcon", (req, res) => {
 });
 
 
+consultRouteDelete.delete("/del/pag", (req, res) => {
+    const { id } = req.body;
+
+    conn.query(
+        `delete from pagamentos where id=${id}`,
+        (err, result) => {
+            if (err) {
+                res.status(500).json({ erro: "Erro ao excluir." });
+            } else {
+                res.json({
+                    mensagem: "Excluido com sucesso",
+                });
+            }
+        }
+    );
+});
+
+
 export { consultRouteDelete }
