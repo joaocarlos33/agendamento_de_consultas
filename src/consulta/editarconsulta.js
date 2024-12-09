@@ -22,10 +22,10 @@ consultRouteUpdate.put("/edit/agendamento", (req, res) => {
 
 
 consultRouteUpdate.put("/edit/medico", (req, res) => {
-    const { id , nome , crm , telefone , email , especialidade } = req.body;
+    const { id , nome , telefone , email , especialidade } = req.body;
 
     conn.query(
-        `UPDATE medicos SET nome = '${nome}', crm = '${crm}', telefone = '${telefone}', email = '${email}', especialidade = '${especialidade}' WHERE id = ${id}`,
+        `UPDATE medicos SET nome = '${nome}', telefone = '${telefone}', email = '${email}', especialidade = '${especialidade}' WHERE id = ${id}`,
         (err, result) => {
             if (err) {
                 res.status(500).json({ erro: "Erro ao atualizar." });
